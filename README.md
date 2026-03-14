@@ -60,3 +60,34 @@ Premium
 
 ```bash
 git clone https://github.com/username/SmartTempah.git
+
+2. **Import Database**
+mysql -u root -p hall_booking < database/hall_booking.sql
+
+3. Update Config :-
+<?php
+$host = "localhost";
+$db = "hall_booking";
+$user = "root";
+$pass = "";
+$conn = new mysqli($host, $user, $pass, $db);
+?>
+
+4. Run Project
+http://localhost/SmartTempah
+
+5. Default Login
+
+Admin
+Username: admin
+Password: admin
+
+Supervisor
+Username: penyelia
+Password: penyelia
+
+User
+Username: user
+Password: user
+
+
