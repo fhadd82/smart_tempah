@@ -66,3 +66,5 @@ templates/_global_admin_members_list.htm
 include/pages/_global_admin_rights_list.php
 include/pages/_global_admin_members_list.php
 include/menunodes_adminarea.php
+kelulusan.php
+urus_dewan.php
