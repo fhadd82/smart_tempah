@@ -1,14 +1,14 @@
-# 📘 SmartTempah / Sistem Tempahan Online
+# 📘 SmarTempah / Sistem Tempahan Online
 
 ## 1. Pengenalan / Introduction
 
 **Bahasa Malaysia:**  
-SmartTempah ialah sistem web berasaskan PHP untuk mengurus tempahan dewan dengan mudah dan efisien. Pengguna boleh daftar akaun, semak dewan tersedia, membuat tempahan, dan menjejaki status tempahan. Admin boleh lulus permohonan, urus dewan, dan jana laporan tempahan. Sesuai untuk sekolah, dewan komuniti, masjid, hotel, dan tempat acara.
+SmarTempah ialah sistem web berasaskan PHP untuk mengurus tempahan dewan dengan mudah dan efisien. Pengguna boleh daftar akaun, semak dewan tersedia, membuat tempahan, dan menjejaki status tempahan. Admin boleh lulus permohonan, urus dewan, dan jana laporan tempahan. Sesuai untuk sekolah, dewan komuniti, masjid, hotel, dan tempat acara.
 
 **English:**  
 SmartTempah is a PHP-based web system for managing hall bookings efficiently. Users can register, check available halls, book slots, and track their bookings. Admins can approve requests, manage halls, and generate booking reports. Ideal for schools, community centers, mosques, hotels, and event venues.
 
-Visit https://www.fhadd.com/reservation/ for Demo.
+Visit https://www.fhadd.com/smartempah/ for Demo.
 
 ---
 
