@@ -97,4 +97,4 @@ Password: user
 Free to use for learning & portfolio. Commercial license available.
 
 6. **Contact / Hubungi**
-   fuadhasan82[@]gmail.com
+   admin[@]fhadd.com
