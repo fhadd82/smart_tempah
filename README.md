@@ -58,13 +58,13 @@ Premium
 
 1. **Clone repository:**
 
-```bash
+
 git clone https://github.com/username/SmartTempah.git
 
 2. **Import Database**
 mysql -u root -p hall_booking < database/hall_booking.sql
 
-3. Update Config :-
+3. **Update Config :-**
 <?php
 $host = "localhost";
 $db = "hall_booking";
@@ -73,10 +73,11 @@ $pass = "";
 $conn = new mysqli($host, $user, $pass, $db);
 ?>
 
-4. Run Project
+
+4. **Run Project**
 http://localhost/SmartTempah
 
-5. Default Login
+5. **Default Login**
 
 Admin
 Username: admin
@@ -90,4 +91,8 @@ User
 Username: user
 Password: user
 
+5. **License / Lesen**
+Free to use for learning & portfolio. Commercial license available.
 
+6. **Contact / Hubungi**
+   fuadhasan82[@]gmai.com
