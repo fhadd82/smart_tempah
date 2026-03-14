@@ -27,10 +27,9 @@ SmartTempah is a PHP-based web system for managing hall bookings efficiently. Us
 
 > Gantikan dengan screenshot sebenar projek.
 
-| Login Page | User Dashboard |
-|------------|----------------|
-| ![login](screenshots/login.png) | ![user_dashboard](screenshots/dashboard_user.png) |
-| ![login](screenshots/login.png) | ![user_dashboard](screenshots/dashboard_user.png) |
+| Login Page | User Dashboard | Tempahan Baru | Senarai Tempahan |
+|------------|----------------|----------------|----------------|
+| ![login](images/screenshot/login.png) | ![user_dashboard](images/screenshot/dashboard_user.png) | ![user_dashboard](images/screenshot/tempahan_baru.png) |  ![user_dashboard](images/screenshot/rekod_tempahan.png) |
 
 | Admin Dashboard | Booking Calendar |
 |-----------------|----------------|
