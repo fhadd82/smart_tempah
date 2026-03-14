@@ -1,0 +1,370 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-search" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="search_header" data-itemid="search_header" {$item_search_header} data-pageid="{$pageid}" >{$pagetitlelabel bookings search}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="6"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="6"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN id_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_id}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="id{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="id" data-fieldname="id" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_id}">
+		{$label bookings id }	</label>
+	<div class="r-search-option">
+		{$searchtype_id}
+	</div>
+	<div class="r-search-field">
+		{$id_editcontrol}	</div>
+	<div class="r-search-field">
+		{$id_editcontrol1}
+	</div>
+	
+</div>
+
+{END id_fieldblock}
+											
+{BEGIN user_id_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_user_id}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="user_id{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="user_id" data-fieldname="user_id" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_user_id}">
+		{$label bookings user_id }	</label>
+	<div class="r-search-option">
+		{$searchtype_user_id}
+	</div>
+	<div class="r-search-field">
+		{$user_id_editcontrol}	</div>
+	<div class="r-search-field">
+		{$user_id_editcontrol1}
+	</div>
+	
+</div>
+
+{END user_id_fieldblock}
+											
+{BEGIN hall_id_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_hall_id}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="hall_id{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field2" {$item_integrated_search_field2} data-pageid="{$pageid}" data-field="hall_id" data-fieldname="hall_id" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_hall_id}">
+		{$label bookings hall_id }	</label>
+	<div class="r-search-option">
+		{$searchtype_hall_id}
+	</div>
+	<div class="r-search-field">
+		{$hall_id_editcontrol}	</div>
+	<div class="r-search-field">
+		{$hall_id_editcontrol1}
+	</div>
+	
+</div>
+
+{END hall_id_fieldblock}
+											
+{BEGIN purpose_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_purpose}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="purpose{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field3" {$item_integrated_search_field3} data-pageid="{$pageid}" data-field="purpose" data-fieldname="purpose" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_purpose}">
+		{$label bookings purpose }	</label>
+	<div class="r-search-option">
+		{$searchtype_purpose}
+	</div>
+	<div class="r-search-field">
+		{$purpose_editcontrol}	</div>
+	<div class="r-search-field">
+		{$purpose_editcontrol1}
+	</div>
+	
+</div>
+
+{END purpose_fieldblock}
+											
+{BEGIN start_datetime_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_start_datetime}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="start_datetime{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field4" {$item_integrated_search_field4} data-pageid="{$pageid}" data-field="start_datetime" data-fieldname="start_datetime" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_start_datetime}">
+		{$label bookings start_datetime }	</label>
+	<div class="r-search-option">
+		{$searchtype_start_datetime}
+	</div>
+	<div class="r-search-field">
+		{$start_datetime_editcontrol}	</div>
+	<div class="r-search-field">
+		{$start_datetime_editcontrol1}
+	</div>
+	
+</div>
+
+{END start_datetime_fieldblock}
+											
+{BEGIN end_datetime_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_end_datetime}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="end_datetime{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field5" {$item_integrated_search_field5} data-pageid="{$pageid}" data-field="end_datetime" data-fieldname="end_datetime" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_end_datetime}">
+		{$label bookings end_datetime }	</label>
+	<div class="r-search-option">
+		{$searchtype_end_datetime}
+	</div>
+	<div class="r-search-field">
+		{$end_datetime_editcontrol}	</div>
+	<div class="r-search-field">
+		{$end_datetime_editcontrol1}
+	</div>
+	
+</div>
+
+{END end_datetime_fieldblock}
+											
+{BEGIN approval_status_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_approval_status}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="approval_status{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field6" {$item_integrated_search_field6} data-pageid="{$pageid}" data-field="approval_status" data-fieldname="approval_status" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_approval_status}">
+		{$label bookings approval_status }	</label>
+	<div class="r-search-option">
+		{$searchtype_approval_status}
+	</div>
+	<div class="r-search-field">
+		{$approval_status_editcontrol}	</div>
+	<div class="r-search-field">
+		{$approval_status_editcontrol1}
+	</div>
+	
+</div>
+
+{END approval_status_fieldblock}
+											
+{BEGIN supervisor_remarks_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_supervisor_remarks}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="supervisor_remarks{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field7" {$item_integrated_search_field7} data-pageid="{$pageid}" data-field="supervisor_remarks" data-fieldname="supervisor_remarks" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_supervisor_remarks}">
+		{$label bookings supervisor_remarks }	</label>
+	<div class="r-search-option">
+		{$searchtype_supervisor_remarks}
+	</div>
+	<div class="r-search-field">
+		{$supervisor_remarks_editcontrol}	</div>
+	<div class="r-search-field">
+		{$supervisor_remarks_editcontrol1}
+	</div>
+	
+</div>
+
+{END supervisor_remarks_fieldblock}
+											
+{BEGIN created_at_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_created_at}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="created_at{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field8" {$item_integrated_search_field8} data-pageid="{$pageid}" data-field="created_at" data-fieldname="created_at" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_created_at}">
+		{$label bookings created_at }	</label>
+	<div class="r-search-option">
+		{$searchtype_created_at}
+	</div>
+	<div class="r-search-field">
+		{$created_at_editcontrol}	</div>
+	<div class="r-search-field">
+		{$created_at_editcontrol1}
+	</div>
+	
+</div>
+
+{END created_at_fieldblock}
+											
+{BEGIN booking_id_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_booking_id}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="booking_id{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field9" {$item_integrated_search_field9} data-pageid="{$pageid}" data-field="booking_id" data-fieldname="booking_id" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_booking_id}">
+		{$label bookings booking_id }	</label>
+	<div class="r-search-option">
+		{$searchtype_booking_id}
+	</div>
+	<div class="r-search-field">
+		{$booking_id_editcontrol}	</div>
+	<div class="r-search-field">
+		{$booking_id_editcontrol1}
+	</div>
+	
+</div>
+
+{END booking_id_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	">
+	 
+		<span data-itemtype="search_search" data-itemid="search_search" {$item_search_search} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$searchbutton_attrs} data-page=undefined >
+							Search			</a>
+</span>
+	 
+		<span data-itemtype="search_reset" data-itemid="search_reset" {$item_search_reset} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$resetbutton_attrs} >
+							Reset			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="search_back_list" data-itemid="search_back_list" {$item_search_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Back to list			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="search_cancel" data-itemid="search_cancel" {$item_search_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							Cancel			</a>
+</span>
+{END cancel_button}
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

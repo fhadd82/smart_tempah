@@ -1,0 +1,277 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-add" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="add_header" data-itemid="add_header" {$item_add_header} data-pageid="{$pageid}" >{$pagetitlelabel halls add}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		{BEGIN message_block}
+<div data-itemtype="add_message" data-itemid="add_message" {$item_add_message} data-pageid="{$pageid}" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN message_back_button}
+		
+	<button class="btn btn-sm btn-default" {$backbutton_attrs}>Back to list</button>
+	{END message_back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>View</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>Edit</button>
+{END edit_page_button}
+</div>
+</div>
+{END message_block}	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN hall_id_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_hall_id}  r-vertical-field" 
+	data-signal-error-for="hall_id{$id}" {$required_attr_hall_id}
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="hall_id" data-fieldname="hall_id" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_hall_id}">
+		{BEGIN hall_id_label}{$label halls hall_id }{END hall_id_label}
+		<span class="icon-required"></span>
+	</label>
+	<div class="r-edit-field">
+		{$hall_id_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="hall_id" {$tooltipAttr halls hall_id } >
+		<div class="text-muted" >
+		{$tooltip halls hall_id }		</div>
+	</div>
+</div>
+
+
+{END hall_id_fieldblock}
+											
+{BEGIN hall_name_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_hall_name}  r-vertical-field" 
+	data-signal-error-for="hall_name{$id}" {$required_attr_hall_name}
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="hall_name" data-fieldname="hall_name" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_hall_name}">
+		{BEGIN hall_name_label}{$label halls hall_name }{END hall_name_label}
+		<span class="icon-required"></span>
+	</label>
+	<div class="r-edit-field">
+		{$hall_name_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="hall_name" {$tooltipAttr halls hall_name } >
+		<div class="text-muted" >
+		{$tooltip halls hall_name }		</div>
+	</div>
+</div>
+
+
+{END hall_name_fieldblock}
+											
+{BEGIN capacity_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_capacity}  r-vertical-field" 
+	data-signal-error-for="capacity{$id}" {$required_attr_capacity}
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="capacity" data-fieldname="capacity" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_capacity}">
+		{BEGIN capacity_label}{$label halls capacity }{END capacity_label}
+		<span class="icon-required"></span>
+	</label>
+	<div class="r-edit-field">
+		{$capacity_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="capacity" {$tooltipAttr halls capacity } >
+		<div class="text-muted" >
+		{$tooltip halls capacity }		</div>
+	</div>
+</div>
+
+
+{END capacity_fieldblock}
+											
+{BEGIN location_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_location}  r-vertical-field" 
+	data-signal-error-for="location{$id}" {$required_attr_location}
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="location" data-fieldname="location" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_location}">
+		{BEGIN location_label}{$label halls location }{END location_label}
+		<span class="icon-required"></span>
+	</label>
+	<div class="r-edit-field">
+		{$location_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="location" {$tooltipAttr halls location } >
+		<div class="text-muted" >
+		{$tooltip halls location }		</div>
+	</div>
+</div>
+
+
+{END location_fieldblock}
+											
+{BEGIN status_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_status}  r-vertical-field" 
+	data-signal-error-for="status{$id}" {$required_attr_status}
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="status" data-fieldname="status" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_status}">
+		{BEGIN status_label}{$label halls status }{END status_label}
+		<span class="icon-required"></span>
+	</label>
+	<div class="r-edit-field">
+		{$status_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="status" {$tooltipAttr halls status } >
+		<div class="text-muted" >
+		{$tooltip halls status }		</div>
+	</div>
+</div>
+
+
+{END status_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	">
+	 
+		<span data-itemtype="add_save" data-itemid="add_save" {$item_add_save} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$savebutton_attrs} >
+							Save			</a>
+</span>
+	 
+		<span data-itemtype="add_reset" data-itemid="add_reset" {$item_add_reset} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="resetButton{$id}" >
+							Reset			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="add_back_list" data-itemid="add_back_list" {$item_add_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="backButton{$id}" >
+							Back to list			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="add_cancel" data-itemid="add_cancel" {$item_add_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							Cancel			</a>
+</span>
+{END cancel_button}
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html {$html_attrs}>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>{$pagetitle}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <base href="{$projectPath}">
+    
+    <link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+    {BEGIN rtlCSS}
+    <link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+    <link REL="stylesheet" href="{$stylepath}" type="text/css">
+    {END styleCSSFiles}
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ========================================================
+           1. RESET KESELURUHAN & TEMA KOSMIK (DARK)
+           ======================================================== */
+        html, body {
+            margin: 0 !important;
+            padding: 0 !important;
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            background-color: #030712 !important; /* Kosmik Slate 950 */
+            color: #f8fafc !important;
+            width: 100% !important;
+            height: 100% !important;
+            overflow-x: hidden;
+        }
+
+        .r-wrapper, .r-content, .r-container, .r-body {
+            max-width: 100% !important; width: 100% !important; display: flex !important;
+            justify-content: center !important; align-items: center !important;
+            padding: 0 !important; margin: 0 !important; background: transparent !important;
+        }
+        
+        .r-form { background: transparent !important; box-shadow: none !important; padding: 0 !important; width: 100% !important; }
+        [data-makeup="pretty-login"] { display: block !important; width: 100% !important; }
+
+        /* ========================================================
+           2. ANIMASI LATAR BELAKANG KOSMIK (BLOBS)
+           ======================================================== */
+        @keyframes blob {
+            0% { transform: translate(0px, 0px) scale(1); }
+            50% { transform: translate(30px, -50px) scale(1.1); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+        .cosmic-blob-1 {
+            position: fixed; top: -10%; left: -10%; width: 500px; height: 500px;
+            background: #4f46e5; border-radius: 50%; mix-blend-mode: screen;
+            filter: blur(120px); opacity: 0.4; animation: blob 10s infinite alternate; z-index: 1;
+        }
+        .cosmic-blob-2 {
+            position: fixed; bottom: -10%; right: -10%; width: 600px; height: 600px;
+            background: #c026d3; border-radius: 50%; mix-blend-mode: screen;
+            filter: blur(150px); opacity: 0.3; animation: blob 12s infinite alternate-reverse; z-index: 1;
+        }
+
+        /* ========================================================
+           3. KAD LOG MASUK UTAMA (GLASSMORPHISM GELAP)
+           ======================================================== */
+        .page-container {
+            display: flex;
+            background: rgba(15, 23, 42, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 30px;
+            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.8); 
+            overflow: hidden;
+            width: 90%;
+            max-width: 850px; 
+            min-height: 480px; 
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 50;
+        }
+
+        /* ========================================================
+           4. PANEL KIRI (BRANDING KOSMIK)
+           ======================================================== */
+        .left-panel {
+            background: linear-gradient(135deg, rgba(79,70,229,0.8) 0%, rgba(192,38,211,0.6) 100%);
+            color: #FFFFFF;
+            padding: 40px; 
+            width: 45%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden;
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .glow-shape-1 { position: absolute; width: 250px; height: 250px; background: rgba(255,255,255,0.15); border-radius: 50%; filter: blur(40px); top: -80px; left: -80px; }
+        .glow-shape-2 { position: absolute; width: 300px; height: 300px; background: rgba(0,0,0,0.3); border-radius: 50%; filter: blur(50px); bottom: -100px; right: -100px; }
+
+        .system-info { position: relative; z-index: 10; margin-top: 20px;}
+
+        .left-panel h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 32px; 
+            font-weight: 900;
+            line-height: 1.1;
+            margin: 0 0 12px 0;
+            color: #FFFFFF;
+            letter-spacing: -0.5px;
+            text-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .left-panel p { font-size: 12px; line-height: 1.6; margin: 0; color: rgba(255, 255, 255, 0.85); font-weight: 500; }
+
+        .security-box {
+            position: relative; z-index: 10; background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px; padding: 12px 16px; display: flex; align-items: center; gap: 12px;
+        }
+        .security-box h4 { margin: 0 0 3px 0; font-size: 9px; font-weight: 800; color: white; letter-spacing: 0.5px; }
+        .security-box p { margin: 0; font-size: 9px; color: #a5b4fc; }
+
+        /* ========================================================
+           5. PANEL KANAN (BORANG GLASS GELAP)
+           ======================================================== */
+        .right-panel {
+            padding: 40px 50px; 
+            width: 55%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: rgba(15, 23, 42, 0.5); /* Slate 900 transparent */
+            position: relative;
+            z-index: 1;
+        }
+
+        .right-panel h2 { font-family: 'Outfit', sans-serif; font-size: 26px; font-weight: 800; margin: 0 0 6px 0; color: #f8fafc; letter-spacing: -0.5px; } 
+        .subtitle { font-size: 12px; color: #94a3b8; margin: 0 0 24px 0; font-weight: 500; }
+
+        /* KOTAK RALAT KOSMIK */
+        .error-message-box { background-color: rgba(225, 29, 72, 0.1); border: 1px solid rgba(225, 29, 72, 0.3); border-radius: 12px; padding: 10px 14px; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+        .error-icon { background-color: #E11D48; color: white; width: 16px; height: 16px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 9px; font-weight: bold; flex-shrink: 0; box-shadow: 0 0 10px rgba(225, 29, 72, 0.5); }
+        .error-text { color: #fda4af; font-size: 11px; font-weight: 600; width: 100%;}
+
+        /* INPUT BORANG (DARK GLASS) */
+        .input-group { margin-bottom: 16px; width: 100%; display: block; }
+        .input-group label { display: block; font-size: 9px; font-weight: 800; color: #818cf8; margin-bottom: 6px; letter-spacing: 1px; text-transform: uppercase; }
+        
+        .custom-input-wrapper { 
+            position: relative; width: 100%; display: flex; align-items: center; 
+            background-color: rgba(255, 255, 255, 0.03); 
+            border: 1px solid rgba(255, 255, 255, 0.1); 
+            border-radius: 12px; overflow: hidden; transition: all 0.3s ease; box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+        }
+        .custom-input-wrapper:focus-within {
+            background-color: rgba(255, 255, 255, 0.08); border-color: #6366F1; box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+        }
+        
+        .input-icon { padding-left: 14px; padding-right: 8px; display: flex; color: #64748b; transition: color 0.3s ease; }
+        .custom-input-wrapper:focus-within .input-icon { color: #818cf8; }
+        
+        span[data-itemtype="username"], span[data-itemtype="password"], .r-edit-field { display: block !important; width: 100% !important; flex-grow: 1; }
+
+        .form-control {
+            width: 100% !important; padding: 12px 14px 12px 0 !important; border: none !important; box-shadow: none !important;
+            font-size: 13px !important; font-weight: 600 !important; color: #f8fafc !important;
+            background-color: transparent !important; box-sizing: border-box; display: block !important;
+        }
+        .form-control:focus { outline: none !important; }
+        .form-control::placeholder { color: #475569 !important; font-weight: 500 !important; }
+
+        /* Mengatasi isian automatik pelayar web supaya kekal gelap */
+        input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active{
+            -webkit-box-shadow: 0 0 0 50px #0f172a inset !important; -webkit-text-fill-color: white !important;
+        }
+
+        /* CHECKBOX & TETAMU */
+        .options-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; padding: 0 2px; width: 100%;}
+        .checkbox-container { display: flex; align-items: center; gap: 8px; cursor: pointer; }
+        .checkbox-container input { width: 14px; height: 14px; cursor: pointer; accent-color: #6366F1; }
+        .checkbox-container label { font-size: 11px; font-weight: 600; color: #94a3b8; cursor: pointer; margin: 0; transition: 0.2s;}
+        .checkbox-container:hover label { color: #cbd5e1; }
+        .guest-link { font-size: 11px; font-weight: 700; color: #c026d3; text-decoration: none; cursor: pointer; transition: color 0.2s;}
+        .guest-link:hover { color: #e879f9; text-shadow: 0 0 10px rgba(232,121,249,0.4); }
+
+        /* BUTANG UTAMA NEON GLOW */
+        .btn-primary {
+            background: linear-gradient(135deg, #6366F1 0%, #C026D3 100%);
+            color: white !important;
+            width: 100%;
+            padding: 14px; 
+            border: none;
+            border-radius: 12px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            box-sizing: border-box;
+            box-shadow: 0 10px 25px -5px rgba(192, 38, 211, 0.5);
+            text-decoration: none !important;
+        }
+        .btn-primary:hover { 
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px -5px rgba(192, 38, 211, 0.7);
+        }
+
+        /* FOOTER */
+        .footer-text { text-align: center; margin-top: 24px; font-size: 9px; font-weight: 700; color: #475569; letter-spacing: 1px; width: 100%; }
+
+        /* ========================================================
+           RESPONSIVE UNTUK TELEFON PINTAR
+           ======================================================== */
+        @media (max-width: 800px) {
+            .page-container { 
+                flex-direction: column; width: 92%; height: auto; position: absolute; 
+                top: 50%; left: 50%; transform: translate(-50%, -50%); margin: 0; border-radius: 24px; 
+                max-height: 95vh; overflow-y: auto; background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(25px);
+            }
+            .left-panel { display: none; }
+            .right-panel { width: 100%; padding: 35px 24px; background: transparent; }
+            .mobile-header { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 24px; }
+            .mobile-title h1 { font-family: 'Outfit', sans-serif; margin: 0; font-size: 24px; font-weight: 900; color: #f8fafc; line-height: 1.1; text-align: center; }
+            .mobile-title p { margin: 4px 0 0 0; font-size: 11px; color: #818cf8; font-weight: 600; text-align: center; text-transform: uppercase; letter-spacing: 1px;}
+        }
+        .mobile-header { display: none; }
+    </style>
+</head>
+
+<body class="{$stylename} function-login dark" >
+
+    <div class="cosmic-blob-1"></div>
+    <div class="cosmic-blob-2"></div>
+    <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')] opacity-30 pointer-events-none z-[2]"></div>
+
+    {BEGIN body}
+    <div style="display:none;">{$header}</div>
+
+    <div class="page-container">
+        
+        <div class="left-panel">
+            <div class="glow-shape-1"></div>
+            <div class="glow-shape-2"></div>
+            
+            <div class="system-info">
+                <div style="margin-bottom: 25px;">
+                    <div class="w-14 h-14 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center shadow-[0_0_20px_rgba(255,255,255,0.2)]">
+                        <i class="fa-solid fa-calendar-alt" style="font-size: 28px; color: white;"></i>
+                    </div>
+                </div>
+                <h1>SmartDewan<br>Sistem Tempahan</h1>
+                <p>Platform tempahan fasiliti kelas atasan. Navigasi lancar, pengurusan efisien, dan kawalan pintar untuk keselesaan anda.</p>
+            </div>
+
+            <div class="security-box">
+                <i class="fas fa-shield-check text-2xl text-emerald-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.8)]"></i>
+                <div>
+                    <h4>SEKURITI TERJAMIN</h4>
+                    <p>Akses terkawal & data disulitkan sepenuhnya.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-panel">
+            
+            <div class="mobile-header">
+                <div class="w-12 h-12 rounded-xl bg-indigo-500/20 border border-indigo-500/30 flex items-center justify-center">
+                    <i class="fa-solid fa-calendar-alt" style="font-size: 22px; color: #818cf8;"></i>
+                </div>
+                <div class="mobile-title">
+                    <h1>SmartDewan</h1>
+                    <p>Sistem Tempahan</p>
+                </div>
+            </div>
+
+            <h2>Akses Sistem</h2>
+            <p class="subtitle">Sila log masuk untuk meneruskan sesi anda.</p>
+
+            {BEGIN message_block}
+            <div class="error-message-box">
+                <div class="error-icon"><i class="fa-solid fa-xmark"></i></div>
+                <div class="error-text" data-itemtype="login_message" data-itemid="login_message" {$item_login_message} data-pageid="{$pageid}">
+                    {$message}
+                </div>
+            </div>
+            {END message_block}
+
+            <div class="r-form" data-location="grid" id="form_grid_{$pageid}" data-makeup="pretty-login" {$form_grid} data-pageid="{$pageid}">
+                
+                <div class="input-group">
+                    <label for="username">{BEGIN username_label}ID PENGGUNA{END username_label}</label>
+                    <div class="custom-input-wrapper">
+                        <div class="input-icon">
+                            <i class="fas fa-user text-sm"></i>
+                        </div>
+                        <span data-itemtype="username" data-itemid="username" {$item_username} data-pageid="{$pageid}">
+                            <input type="text" class="form-control" name="username" {$username_attrs} id="username" placeholder="Masukkan ID anda">
+                        </span>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">{BEGIN password_label}KATA LALUAN{END password_label}</label>
+                    <div class="custom-input-wrapper">
+                        <div class="input-icon">
+                            <i class="fas fa-lock text-sm"></i>
+                        </div>
+                        <span data-itemtype="password" data-itemid="password" {$item_password} data-pageid="{$pageid}">
+                            <input type="password" class="form-control" name="password" {$password_attrs} id="password" placeholder="••••••••">
+                        </span>
+                    </div>
+                </div>
+
+                <div class="options-row">
+                    <div class="checkbox-container" data-itemtype="remember_password" data-itemid="remember_password" {$item_remember_password} data-pageid="{$pageid}">
+                        <input type="checkbox" id="remember_password{$id}" name="remember_password" value="1" {$rememberbox_attrs}>
+                        <label for="remember_password{$id}">Ingat Saya</label>
+                    </div>
+
+                    {BEGIN guestlink_block}
+                    <div data-itemtype="guest_login" data-itemid="guest_login" {$item_guest_login} data-pageid="{$pageid}" data-button-item>
+                        <a type="button" class="guest-link" {$guestlink_attrs}>Log Masuk Tetamu</a>
+                    </div>
+                    {END guestlink_block}
+                </div>
+
+                {BEGIN signin_button}
+                <div data-itemtype="login_button" data-itemid="login_button" {$item_login_button} data-pageid="{$pageid}" data-button-item style="width: 100%;">
+                    <a type="button" class="btn-primary" {$loginlink_attrs}>
+                        Log Masuk Sistem <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+                {END signin_button}
+                
+            </div>
+
+            <div class="footer-text">
+                HAK CIPTA TERPELIHARA &copy; <script>document.write(new Date().getFullYear());</script> SMARTDEWAN.
+            </div>
+
+        </div>
+    </div>
+
+    <div style="display:none;">{$footer}</div>
+    {END body}
+</body>
+</html>
