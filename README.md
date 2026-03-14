@@ -95,4 +95,4 @@ Password: user
 Free to use for learning & portfolio. Commercial license available.
 
 6. **Contact / Hubungi**
-   fuadhasan82[@]gmai.com
+   fuadhasan82[@]gmail.com
