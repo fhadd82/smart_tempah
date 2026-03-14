@@ -12,28 +12,38 @@ SmartTempah is a PHP-based web system for managing hall bookings efficiently. Us
 
 ## 2. Features / Ciri-ciri Utama
 
-- ✅ User registration & login / Pendaftaran dan login pengguna  
+- ✅ User login / login pengguna  
 - ✅ View available halls / Lihat dewan tersedia  
 - ✅ Book hall & check booking status / Tempah dewan & semak status  
-- ✅ Admin approval & management / Lulus permohonan & urus dewan  
-- ✅ Calendar view for bookings / Paparan kalendar tempahan  
-- ✅ Generate booking reports / Jana laporan tempahan  
-- ✅ Optional: Email notifications / Notifikasi melalui emel  
-- ✅ Optional: PDF export & QR code for booking / Eksport PDF & QR code tempahan  
+- ✅ Supervisor approval & management / Lulus permohonan & urus dewan  
+- ✅ Calendar view for bookings / Paparan kalendar tempahan
 
+Premium
+- ✅ Generate booking reports / Jana laporan tempahan
+- ✅ Smart Suggession / Cadangan Slot Automatik
+- ✅ QR Code Ticket / Tiket QR Code tempahan
+- ✅ Email notifications / Notifikasi melalui emel
+- ✅ SuperAdmin Menu
+      - Audit Trail / Log Audit
+      - Analytics Dashboard / Analitik & Carta Papan Muka
+      - Block Dates / Mod Selenggara
+  
 ---
 
 ## 3. Screenshot / Contoh Paparan
-
-> Gantikan dengan screenshot sebenar projek.
 
 | Login Page | User Dashboard | Tempahan Baru | Senarai Tempahan |
 |------------|----------------|----------------|----------------|
 | ![login](images/screenshot/login.png) | ![user_dashboard](images/screenshot/dashboard_user.png) | ![user_dashboard](images/screenshot/tempahan_baru.png) |  ![user_dashboard](images/screenshot/rekod_tempahan.png) |
 
-| Admin Dashboard | Booking Calendar |
-|-----------------|----------------|
-| ![admin_dashboard](screenshots/admin_dashboard.png) | ![booking_calendar](screenshots/booking_calendar.png) |
+| Supervisor / Penyelia |
+|-----------------|
+| ![penyelia_dashboard](images/screenshot/kelulusan.png) |
+
+
+| Admin Dashboard |
+|-----------------|
+| ![admin_dashboard](images/screenshot/fasiliti.png) |
 
 ---
 
