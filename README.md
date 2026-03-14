@@ -1,4 +1,4 @@
-# 📘 SmartTempah / Sistem Tempahan Dewan
+# 📘 SmartTempah / Sistem Tempahan Online
 
 ## 1. Pengenalan / Introduction
 
