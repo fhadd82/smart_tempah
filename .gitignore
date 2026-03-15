@@ -68,3 +68,11 @@ include/pages/_global_admin_members_list.php
 include/menunodes_adminarea.php
 kelulusan.php
 urus_dewan.php
+bookings_add.php
+bookings_edit.php
+bookings_export.php
+bookings_import.php
+bookings_list.php
+bookings_print.php
+bookings_search.php
+bookings_view.php
