@@ -9,6 +9,11 @@ SmarTempah ialah sistem web berasaskan PHP untuk mengurus tempahan dewan dengan 
 SmartTempah is a PHP-based web system for managing hall bookings efficiently. Users can register, check available halls, book slots, and track their bookings. Admins can approve requests, manage halls, and generate booking reports. Ideal for schools, community centers, mosques, hotels, and event venues.
 
 Visit https://www.fhadd.com/smartempah/ for Demo.
+Admin Username: admin Password: admin
+
+Supervisor Username: penyelia Password: penyelia
+
+User Username: user Password: user
 
 ---
 
